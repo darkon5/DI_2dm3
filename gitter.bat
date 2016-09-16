@@ -1,5 +1,5 @@
 @echo off
-title supah git script
+title supah git scripter
 color 03
 cls
 :repe
