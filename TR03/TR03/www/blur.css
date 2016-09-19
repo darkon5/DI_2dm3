@@ -23,7 +23,7 @@
 }
 
 	.pane {
-        background-image: url('http://i.imgur.com/GHE6yaI.jpg');
+  background-image: url('https://static.pexels.com/photos/2773/city-skyline-skyscrapers-top.jpg');
   display: block;
   position: fixed;
   background-size: cover;
@@ -35,3 +35,17 @@
   filter: blur(5px);
     }
 
+.impactante {
+    color: #404040;
+    letter-spacing: 4dp;
+    font-size: 48px;
+}
+
+.coches{
+	visibility: hidden;
+}
+
+#icon_coche:active {
+    color: #404040;
+    coches.visibility: visible;
+}
