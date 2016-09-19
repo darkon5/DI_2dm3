@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="blur.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+
+  <div class="pane"></div>
+
+    <ion-pane style="z-index:2;">
+      <!--<ion-header-bar class="bar-stable">
+        <h1 class="title">Ionic Blank Starter</h1>
+      </ion-header-bar>-->
+
+      <ion-content>
+
+      <div class="row responsive-sm">
+
+      <div class="col">
+      </div>
+        
+      <div class="col text-center">
+            
+            
+            <a href="./index.html" class="button icon-left ion-chevron-left button-clear button-dark" style="font-size:24px;">Volver</a>
+            <br>
+            <br>
+
+            <span class="no_espaciado">
+              <div class="card">
+
+<div class="list">
+  <label class="item item-input">
+    <input type="text" placeholder="Nombre" required>
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="Apellido" required>
+  </label>
+  <label class="item item-input">
+    <input type="tel" placeholder="Teléfono" >
+  </label>
+  <label class="item item-input">
+    <input type="email" placeholder="Correo" required>
+  </label>
+  <label class="item item-input">
+    <textarea placeholder="Información"></textarea>
+  </label>
+<button class="button button-full button-positive">
+  Enviar formulario
+</button>
+</div>
+
+              </div>
+            </span>
+            
+
+
+        </div>
+
+
+
+
+</div>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>

@@ -1,28 +1,8 @@
-
-
-  .bgblur {
-  	background-image: url('https://i.imgur.com/0FD5Ciu.jpg');
-  background: no-repeat center center fixed;
-  background-size: cover;
+body {
   display: block;
-  left: -5px;
-  top:-5px;
-  bottom:-5px;
-  position: fixed;
-  right: -5px;
-  z-index: -1;
-  -webkit-filter: blur(5px);
-  -moz-filter:  blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  margin:-5px;
 }
 
-	.pane {
+.pane {
   background-image: url('https://static.pexels.com/photos/2773/city-skyline-skyscrapers-top.jpg');
   display: block;
   position: fixed;
@@ -33,19 +13,59 @@
   -o-filter: blur(5px);
   -ms-filter: blur(5px);
   filter: blur(5px);
-    }
-
-.impactante {
-    color: #404040;
-    letter-spacing: 4dp;
-    font-size: 48px;
 }
 
-.coches{
-	visibility: hidden;
+.espaciado {
+letter-spacing: 0.5em;
+}
+.no_espaciado {
+letter-spacing: 0em;
+text-align: left;
+}
+
+.impactante {
+  	color: #404040;
+  	letter-spacing: 4dp;
+  	font-size: 48px;
 }
 
 #icon_coche:active {
     color: #404040;
     coches.visibility: visible;
 }
+
+#iCar:focus ~ #pop_coches {
+  display: block;
+}
+#iInfo:focus ~ #pop_coches {
+  display: none;
+}
+#iForm:focus ~ #pop_coche{
+	display: none;
+}
+
+
+#iCar:focus ~ #pop_about {
+  display: none;
+}
+#iInfo:focus ~ #pop_about{
+  display: block;
+}
+#iForm:focus ~ #pop_about{
+	display: none;
+}
+
+
+#iCar:focus ~ #pop_form {
+  display: none;
+}
+#iInfo:focus ~ #pop_form {
+  display: none;
+}
+#iForm:focus ~ #pop_form{
+	display: block;
+}
+
+#pop_coches{display:none;}
+#pop_about{display:none;}
+#pop_form{display:none;}
