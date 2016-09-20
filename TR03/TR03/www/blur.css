@@ -3,7 +3,7 @@ body {
 }
 
 .pane {
-  background-image: url('https://static.pexels.com/photos/2773/city-skyline-skyscrapers-top.jpg');
+  background-image: url('img/bg.jpg');
   display: block;
   position: fixed;
   background-size: cover;
@@ -18,20 +18,17 @@ body {
 .espaciado {
 letter-spacing: 0.5em;
 }
+
 .no_espaciado {
 letter-spacing: 0em;
 text-align: left;
+
 }
 
 .impactante {
   	color: #404040;
   	letter-spacing: 4dp;
   	font-size: 48px;
-}
-
-#icon_coche:active {
-    color: #404040;
-    coches.visibility: visible;
 }
 
 #iCar:focus ~ #pop_coches {
