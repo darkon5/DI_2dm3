@@ -3,15 +3,19 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+var app = angular.module('todo', ['ionic'])
 
-app.controller('noticiasCtrl', function($scope){
-  $scope.posts = [
-   { title: 'primer post' },
-   { title: 'segundo post'}
+app.controller('noticiasCtrl', function($scope, $http){
+  $scope.posts = [];
+  $http.get('https://www.reddit.com/r/Android/.json')
 
-  ]
+  .success(function(posts){
+    angular.forEach(posts.data.children,function(post){
+      $scope.posts.push(post.data);
+    });
+  });
 });
+/*
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -29,4 +33,4 @@ app.controller('noticiasCtrl', function($scope){
       StatusBar.styleDefault();
     }
   });
-})
+})*/
