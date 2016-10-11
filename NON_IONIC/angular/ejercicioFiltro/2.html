@@ -3,22 +3,24 @@
 
 	<div ng-app="todo" ng-controller="lista">
 
-	<input type="text" ng-model="nombre"><br/>
+	<input type="text" placeholder="Nombre" ng-model="search.name"><br/>
+	<input type="text" placeholder="Telefono" ng-model="search.phone"><br/>
+	<input type="text" placeholder="Edad" ng-model="search.age"><br/>
 
-		<li ng-repeat="nombre in nombres | filter:nombre | orderBy: 'age'">
-			Nombre: {{nombre.name}} Telefono: {{nombre.phone}} Edad: {{nombre.age}}
-		</li>
+		<ul ng-repeat="nombre in nombres | filter:search:name | filter:search:phone | filter:search:age | orderBy: 'age'">
+			<li> Nombre: {{nombre.name}} Telefono: {{nombre.phone}} Edad: {{nombre.age}} </li>
+		</ul>
 	</div>
 
 <script>
 	var app = angular.module ('todo',[]);
 	app.controller ('lista', function($scope){
 		$scope.nombres = [
-			{name: 'Asier',	phone: '666222333', age: 19},
-			{name: 'Asier',	phone: '666222333', age: 22},
-			{name: 'Asier',	phone: '666222333', age: 44},
-			{name: 'Asier',	phone: '666222333', age: 55},
-			{name: 'Carl',	phone: '666222333', age: 09}
+			{name: 'Asier',		phone: '666222333', age: 19},
+			{name: 'Joan',		phone: '666222333', age: 22},
+			{name: 'Paco',		phone: '666222333', age: 44},
+			{name: 'Paquito',	phone: '666222333', age: 55},
+			{name: 'Carl',		phone: '666222333', age: 09}
 
 		];
 	});
