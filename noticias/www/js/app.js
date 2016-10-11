@@ -7,7 +7,7 @@ var app = angular.module('todo', ['ionic'])
 
 app.controller('noticiasCtrl', function($scope, $http){
   $scope.posts = [];
-  $http.get('https://www.reddit.com/r/Android/.json')
+  $http.get('https://www.reddit.com/r/pcmasterrace/.json')
 
   .success(function(posts){
     angular.forEach(posts.data.children,function(post){
