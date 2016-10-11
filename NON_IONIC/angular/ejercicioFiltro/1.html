@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+	<div ng-app="todo" ng-controller="lista">
+		<li ng-repeat="nombre in nombres | filter: 'i'">
+			{{nombre}}
+		</li>
+	</div>
+
+<script>
+	var app = angular.module ('todo',[]);
+	app.controller ('lista', function($scope){
+		$scope.nombres = ['pepa','paco','avaricio','paquito','ramses el divertido'];
+	});
+</script>
