@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-ng-submit-production</title>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- IONIC ANGULAR JS -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+     <!-- CORDOVA -->
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+     <script src="cordova.js"></script>
+    <!-- JAVASCRIPT PERSONALIZADO-->
+    <script src="js/app.js"></script>
+  
+</head>
+<body>
+<div ng-app="myApp" ng-controller="miFormulario">
+  <form name="empleadosForm" ng-submit="submit()">
+    <h1>Introduzca datos:</h1>
+    Nombre:<input type="text" ng-model="nombre" name="nombre" required="required" />
+    <span ng-show="empleadosForm.nombre.$error.required">El campo es obligatorio.</span><br/>
+
+    Apellido:<input type="text" ng-model="apellido" name="apellido" required="required"/>
+    <span ng-show="empleadosForm.apellido.$error.required">El campo es obligatorio.</span><br/> 
+
+    Telefono:<input type="text" ng-model="telefono" name="telefono" ng-minlength="9"  required="required"/>
+    <span ng-show="empleadosForm.telefono.$error.minlength">El campo es obligatorio.</span><br/>
+    <input type="submit" id="submit" value="Submit" />
+    <pre>lista={{list}}</pre>
+   </form>
+ </div>
+</body>
+</html>
