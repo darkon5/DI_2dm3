@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  </head>
+  <body ng-app="">
+
+   <div >
+   <h3>Ejercicio1</h3>
+    <input type="number" ng-model="precio">precio
+    <br>
+    <input type="number" ng-model="cantidad">cantidad
+    <h4>El precio total es de {{precio * cantidad}}</h4>    
+   </div>
+   
+   <div ng-init="items = [
+        { list: 'Jose' },
+        { list: 'Maria' },
+        { list: 'Luis' }
+    ];">
+       <h3>Ejercicio2</h3>
+       <li ng-repeat="item in items">
+           {{item.list}}
+       </li>
+   </div>
+   
+   
+   <div ng-init="lista = [
+       {name:'Jani',country:'Norway',trabajo:'Abogado'},
+        {name:'Hege',country:'Sweden'},
+        {name:'Kai',country:'Denmark'}
+    ];">
+       
+       <h3>Ejercicio3</h3>
+       <li ng-repeat="item in lista">
+           
+           {{item.name}} ---> {{item.country}} ---> {{item.trabajo}}
+            
+       </li>
+       
+       
+   </div>
+  </body>
+</html>

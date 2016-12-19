@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html ng-app="app">
+ 
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    
+  </head>
+ 
+  <body ng-controller="PruebaController">
+   <p>{{mensaje}}</p>
+   <button type="button" ng-click="cambioMensaje()">pulsa para cambiar</button>
+    <button type="button" ng-click="volverMensaje()">pulsa para cambiar</button>
+  
+    <script>
+    	var app=angular.module("app",[]);
+  		app.controller('PruebaController',function($scope){
+  		$scope.mensaje ="Hola Mundo";
+
+  		$scope.cambioMensaje=function(){
+  			$scope.mensaje="Adios mundo cruel"
+  		}
+      $scope.volverMensaje=function() {
+        $scope.mensaje ="Hola Mundo";
+      }
+		});
+   </script> 
+  </body>
+</html>

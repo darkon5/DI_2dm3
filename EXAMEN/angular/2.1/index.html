@@ -1,0 +1,35 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+  <script>
+  var app = angular.module ('todo',[]);
+  app.controller ('lista', function($scope){
+    $scope.nombres = [
+  {nombre:'Maria', ciudad:'Bilbao', genero:'Mujer'},
+  {nombre:'Luis', ciudad:'Donostia', genero:'Hombre'},
+  {nombre:'Rosa', ciudad:'Durango', genero:'Mujer'},
+  {nombre:'Miren', ciudad:'Lekeitio', genero:'Mujer'},
+  {nombre:'Pedro', ciudad:'Barakaldo', genero:'Hombre'}
+  ];
+  });
+
+  </script>
+</head>
+
+<body>
+  <div ng-app="todo" ng-controller="lista">
+
+
+    <ul>
+      <li ng-repeat="nombre in nombres | orderBy:'nombre'">
+        <span>nombre:</span>
+        <span>{{nombre.nombre}}</span> ///
+        <span>vive en:</span>
+        <span>{{nombre.ciudad}}</span> ///
+        <span>genero:</span>
+        <span>{{nombre.genero}}</span>
+        <br>
+      </li>
+    </ul>
+  </div>
+</body>

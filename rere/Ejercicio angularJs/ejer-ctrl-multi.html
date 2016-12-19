@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="datos.js"></script>
+<body ng-app="todo">
+<div ng-controller="primerControlador">
+<h2>Modelo gestionado por el primer controlador</h2>
+<h4>Nombre: <strong>{{nombre}}</strong></h4>
+<h4>Apellido: <strong>{{apellido}}</strong></h4>
+<h4>Nombre Completo: <strong>{{nombre + "" + apellido}}</strong></h4>
+<label>Introduzca tu nombre: <input type="text" ng-model="nombre"></label><br/>
+<label>Introduzca tu apellido: <input type="text" ng-model="apellido"></label><br/>
+<div>
+
+</body>
+</html>

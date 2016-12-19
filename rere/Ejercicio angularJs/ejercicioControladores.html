@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="todo">
+
+<div ng-controller="controlador1">
+   <h2>Modelo controlado por el primer controlador</h2>
+    <p>First name: {{nombre}}</p>
+    <p>Last name: {{apellido}}</p>
+    <p>Full name: {{nombre}} {{apellido}}</p>
+    
+    
+    <br>
+    <label for="">Set the first name:<input type="text" ng-model="nombre"></label><br>
+    <label for="">Set the last name:<input type="text" ng-model="apellido"></label>
+    
+</div>
+
+
+<div ng-controller="controlador2">
+   <h2>Modelo controlado por el primer controlador</h2>
+    <p>First name: {{nombre}}</p>
+    <p>Middle name: {{medio}}</p>
+    <p>Last name: {{apellido}}</p>
+    <p>Full name: {{nombre}} {{medio}} {{apellido}}</p>
+    
+    
+    <br>
+    <label for="">Set the first name:<input type="text" ng-model="nombre"></label><br>
+     <label for="">Set the middle name:<input type="text" ng-model="medio"></label><br>
+    <label for="">Set the last name:<input type="text" ng-model="apellido"></label>
+    
+</div>
+
+<script>
+    
+    var app= angular.module('todo',[]);
+    
+    app.controller('controlador1',function($scope){
+        
+        
+        $scope.nombre="John";
+        $scope.apellido="Doe";
+        
+        
+        
+        
+        
+        
+    })
+    app.controller('controlador2',function($scope){
+        
+        
+        $scope.nombre="Bob";
+        $scope.medio="Al";
+        $scope.apellido="Smith";
+        
+        
+        
+        
+        
+        
+    })
+    
+</script>
+
+
+</body>
+</html>

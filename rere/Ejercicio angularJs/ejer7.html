@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="todo" ng-controller="myCtrl">
+<p>Los tres libros mas leidos::</p>
+
+
+<ion-list>
+	<ion-item ng-repeat="task in tasks">
+	<p>{{task.title}}</p>
+	</ion-item>
+</ion-list>
+
+
+<script>
+	var app=angular.module('todo', []);
+	app.controller('myCtrl', function($scope){
+		$scope.tasks = [
+
+		{title: 'Los pilares de la tierra'},
+		{title: 'Los caballeros de la mesa redonda'},
+		{title: 'La sabana santa'}
+
+		];
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="app">
+ 
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    
+  </head>
+ 
+  <body ng-controller="PruebaController">
+	<form ng-submit="envioFormulario()">
+		<input type="text" ng-model="datos"/>
+		<input type="submit"/>
+	</form>
+		<p>{{mensaje}}</p>
+  
+    <script>
+    	var app=angular.module("app",[]);
+  		app.controller('PruebaController',function($scope){
+  		$scope.datos
+  		$scope.mensaje = null;
+
+  		$scope.envioFormulario = function(){
+  			$scope.mensaje = "Formulario enviado con el valor: " + $scope.datos;
+  			}
+  		});
+   </script> 
+  </body>
+</html>

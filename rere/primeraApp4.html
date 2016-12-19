@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="app">
+ 
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    
+  </head>
+ 
+  <body ng-controller="PruebaController">
+   <p>{{mensaje}}</p>
+   <input type="text" ng-change="cambiar()" ng-model="name">
+  
+    <script>
+    	var app=angular.module("app",[]);
+  		app.controller('PruebaController',function($scope){
+  		$scope.name = null;
+  		$scope.mensaje = null;
+
+  		$scope.cambiar = function(){
+
+  			if($scope.name) {
+  				$scope.mensaje = "Hola " + $scope.name;
+  			}else {
+  				$scope.mensaje = "";
+  			}
+  		}
+		});
+   </script> 
+  </body>
+</html>

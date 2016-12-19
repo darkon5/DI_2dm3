@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html ng-app="app">
+ 
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    
+  </head>
+ 
+  <body ng-controller="PruebaController">
+   <p>{{suma}}</p>
+   <button type="button" ng-click="imcrementa()" value="">pulsa para imcrementar</button>
+  
+    <script>
+    	var app=angular.module("app",[]);
+  		app.controller('PruebaController',function($scope){
+  		$scope.suma = 0;
+
+  		$scope.imcrementa = function(){
+  			$scope.suma ++;
+  		}
+		});
+   </script> 
+  </body>
+</html>

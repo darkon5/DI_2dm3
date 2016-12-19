@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+  <link rel="manifest" href="manifest.json">
+  <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/estilo.css" rel="stylesheet">
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+  <!-- your app's js -->
+  <script src="js/app.js"></script>
+</head>
+
+<body ng-app="starter" id="body">
+  <ion-pane>
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">DeniBanc</h1>
+    </ion-header-bar>
+    <ion-content ng-controller="loginCtrl">
+      <!--<h3>Bienvenido al banco que no te da sida</h3>-->
+      <div class="list" ng-hide="hideform">
+        <label class="item item-input" ng-model="username">
+    <input required type="text" placeholder="DNI" ng-model="ctrl.user.name">
+  </label>
+        <label class="item item-input">
+    <input required type="text" placeholder="PIN" ng-model="ctrl.user.pass">
+  </label>
+        <div class="putoboton">
+          <button ng-click="click()" class="button button-outline button-full button-positive">Entrar</button>
+          <button ng-click="register()" class="button button-small button-outline button-full button-calm">Date de alta</button>
+          <div ng-show="showSpinner" class="card centrado"><br>
+            <ion-spinner class="spinner-calm espacio_spinner"></ion-spinner></div>
+            <div class="tapador putoboton"></div>
+          </div>
+        </div>
+      </div>
+      <div ng-show="showInfo" id="infoshow">
+        <div class="list card">
+          <div class="item "><!-- item-avatar -->
+            <!--<img src="mcfly.jpg">-->
+            <h2>{{namer}}</h2>
+            <p> <span ng-class="{'bajocero': negativ}">{{cashr}} €</span></p>
+          </div>
+          <div class="item item-body">
+            <ul class="list" ng-repeat="x in trade">
+            <li ng-class="{true:'negativ',false:''}[x<0]">
+              {{x}} €
+            </li>
+            </ul>
+            <p><div class="putoboton">
+              <input type="number" ng-model="meterr">
+              <button ng-click="masMunny()" class="subdued button">Meter</button>
+              <button ng-click="menosMunny()" class="subdued button">Sacar</button>
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--<h3>Bienvenido al banco que no te da sida</h3>-->
+      <!--<div class="card">
+        <div class="item item-header">
+          Tu cuenta
+        </div>
+        <div class="item item-text-wrap">
+          Estas judio, tete.
+        </div>
+        <div class="item item-divider">
+          I'm a Footer in a Card!
+        </div>-->
+      </div>
+    </ion-content>
+  </ion-pane>
+</body>
+
+</html>

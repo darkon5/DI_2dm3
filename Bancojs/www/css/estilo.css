@@ -1,0 +1,35 @@
+html{
+    transition: 2s;
+}
+
+.putoboton{
+    padding: 25px;
+    margin: 0 auto;
+    width: 90%;
+}
+ion-content{
+    background-color: #fefefe;
+}
+.list{
+    transition: visibility 2s;
+}
+.centrado{
+    position:absolute;
+    height: 5rem;
+    width: 5rem;
+    left:40%;
+    top:50%;
+    margin: 0 auto;
+}
+
+.espacio_spinner{
+    padding-top: 1.5rem;
+    padding: 1.5rem;
+}
+.tapador{
+    height: 52vh;
+}
+
+.bajocero{
+    color: red;
+}

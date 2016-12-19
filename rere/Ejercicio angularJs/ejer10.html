@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+<div ng-app="" ng-init="nombres=[
+	{nombre:'Jani', pais:'Noruega'},
+	{nombre:'Heg', pais:'Suecia'},
+	{nombre:'Kai', pais:'Dinamarca'}]">
+
+	<ul>
+		<li ng-repeat="nom in nombres">
+		{{nom.nombre+ " "+ nom.pais}}
+	</ul>
+</div>
+</body>
+</html>

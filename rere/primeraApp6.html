@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="app">
+ 
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    
+  </head>
+ 
+  <body ng-controller="PruebaController">
+		
+		<input type="text" ng-model="texto"/>
+		<p>el texto ha sido actualizado {{contador}} veces</p>
+  
+    <script>
+    	var app=angular.module("app",[]);
+  		app.controller('PruebaController',function($scope){
+  		$scope.contador = 0;
+  		$scope.$watch('texto', function(nuevoValor, viejoValor){
+  			$scope.contador++;
+  			if ($scope.contador == 50){
+  				alert('ya has te has movido por la cantidad de caracteres definidos');
+  			}
+ 		});
+  	});
+   </script> 
+  </body>
+</html>

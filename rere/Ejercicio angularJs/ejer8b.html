@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="">
+	<label>
+		Introduzca cantidad:
+	</label><input type="number" ng-model="cantidad" />
+	<label>
+	<br/>
+		Introduzca precio:
+	</label><input type="number" ng-model="precio" />
+	<h1>El importe total es de: {{cantidad*precio}}</h1>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+<div ng-app="todo" ng-controller="myCtrl">
+	<ul>
+		<li ng-repeat="nom in nombres">
+		{{nom.nombre+ " "+ nom.pais}}
+	</ul>
+</div>
+<script type="text/javascript">
+	var app = angular.module('todo',[]);
+	app.controller('myCtrl', function($scope){
+		$scope.nombres = [
+		{nombre:'Jani', pais:'Noruega'},
+		{nombre:'Heg', pais:'Suecia'},
+		{nombre:'Kai', pais:'Dinamarca'}
+		];
+	})
+</script>
+
+</div>
+</body>
+</html>
